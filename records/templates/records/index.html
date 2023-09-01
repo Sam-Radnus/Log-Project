@@ -1,0 +1,8 @@
+{% extends 'main.html'%}
+{% block content%}
+
+{% for log in logs %}
+<p><span>{{log.project_name}}</span>&nbsp;<span>{{log.time}}</span></p>
+{% endfor %}
+
+{% endblock content%}
