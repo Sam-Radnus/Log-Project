@@ -3,7 +3,10 @@ import json
 from .models import Log
 from django.utils import timezone 
 from django.http import JsonResponse
+from django.views.decorators.http import require_http_methods
+
 # Create your views here.
+@require_http_methods(["GET", "POST"])
 def createLog(request):
     try:
         info=json.loads(request.body)
