@@ -12,7 +12,7 @@ def createLog(request):
     try:
         info=json.loads(request.body)
         name=info["name"]
-        
+    
         new_log_entry=Log(
             project_name=name,
             time=timezone.now()
